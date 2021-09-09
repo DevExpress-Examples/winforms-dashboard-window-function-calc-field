@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="New Dashboard" />
+  <DataSources>
+    <ObjectDataSource Name="Object Data Source" ComponentName="objectDataSource1" DataId="odsSales">
+      <DataSource Type="ProductSales, WinFormsDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      <DataMember>GetSalesData</DataMember>
+      <CalculatedFields>
+        <CalculatedField Name="PercentOfSalesTotal" Expression="ToDouble(Sum([Sales])) / w(Total(Sum([Sales])), partitionBy(), orderBy())" DataType="Auto" />
+      </CalculatedFields>
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="objectDataSource1">
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem1" />
+        <Dimension DataMember="OrderID" DefaultId="DataItem0" />
+        <Dimension DataMember="Product" DefaultId="DataItem2" />
+        <Measure DataMember="Sales" DefaultId="DataItem3" />
+        <Measure DataMember="PercentOfSalesTotal" DefaultId="DataItem5">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem5" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
