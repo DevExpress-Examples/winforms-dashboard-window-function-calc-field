@@ -1,3 +1,7 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/404742878/21.1.5%2B)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Dashboard for WinForms - How to use Window Functions in Calculated Fields
 
 Our dashboard has the built-in [Window Calculations](https://docs.devexpress.com/Dashboard/116917/common-features/advanced-analytics/window-calculations?p=netframework) functionality and you can use [predefined patterns](https://docs.devexpress.com/Dashboard/115920/common-features/advanced-analytics/window-calculations/creating-window-calculations) (including custom expressions) to define the *window calculation* for a certain [Measure](https://docs.devexpress.com/Dashboard/116523/basic-concepts-and-terminology/measures-and-dimensions?p=netframework) field.
