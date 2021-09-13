@@ -7,7 +7,7 @@
 
 This example emulates the standard [Percent of Total](https://docs.devexpress.com/Dashboard/115920/common-features/advanced-analytics/window-calculations/creating-window-calculations#percent-of-total) window calculation behavior in the calculated field's expression.
 
-You cannot include the [window functions](https://docs.devexpress.com/Dashboard/400122/common-features/advanced-analytics/expression-constants-operators-and-functions#functions) in a [calculated field](https://docs.devexpress.com/Dashboard/116934/common-features/advanced-analytics/calculated-fields) directly. To support window functions inside calculated field expression, use the [w-Function](https://docs.devexpress.com/Dashboard/401421/common-features/advanced-analytics/aggregations/w-function-aggregation-intermediate-level).
+You cannot include the [window functions](https://docs.devexpress.com/Dashboard/400122/common-features/advanced-analytics/expression-constants-operators-and-functions#functions) in a [calculated field](https://docs.devexpress.com/Dashboard/116934/common-features/advanced-analytics/calculated-fields) directly. To support window functions inside a calculated field expression, use the [w-Function](https://docs.devexpress.com/Dashboard/401421/common-features/advanced-analytics/aggregations/w-function-aggregation-intermediate-level).
 
 This example contains the calculated field with the following expression:
 
