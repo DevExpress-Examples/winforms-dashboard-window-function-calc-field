@@ -5,11 +5,11 @@
 <!-- default badges end -->
 # Dashboard for WinForms - How to use Window Functions in Calculated Fields
 
-Our dashboard has the built-in [Window Calculations](https://docs.devexpress.com/Dashboard/116917/common-features/advanced-analytics/window-calculations?p=netframework) functionality and you can use [predefined patterns](https://docs.devexpress.com/Dashboard/115920/common-features/advanced-analytics/window-calculations/creating-window-calculations) (including custom expressions) to define the *window calculation* for a certain [Measure](https://docs.devexpress.com/Dashboard/116523/basic-concepts-and-terminology/measures-and-dimensions?p=netframework) field.
+This example emulates the standard [Percent of Total](https://docs.devexpress.com/Dashboard/115920/common-features/advanced-analytics/window-calculations/creating-window-calculations#percent-of-total) window calculation behavior in the calculated field's expression.
 
-However, there are certain usage scenarios when you wish to use some *window function* (see the corresponding subsection in the [Functions](https://docs.devexpress.com/Dashboard/400122/common-features/advanced-analytics/expression-constants-operators-and-functions#functions) help section) in the context of the [Calculated Field](https://docs.devexpress.com/Dashboard/116934/common-features/advanced-analytics/calculated-fields?p=netframework). For example, you may wish to perform complex calculation and combine several calculated fields. Since there is no way to include *window function* in the *calculated field* directly, the solution is to use the [w-Function](https://docs.devexpress.com/Dashboard/401421/common-features/advanced-analytics/aggregations/w-function-aggregation-intermediate-level?p=netframework).
+You cannot include the [window functions](https://docs.devexpress.com/Dashboard/400122/common-features/advanced-analytics/expression-constants-operators-and-functions#functions) in a [calculated field](https://docs.devexpress.com/Dashboard/116934/common-features/advanced-analytics/calculated-fields) directly. To support window functions inside a calculated field expression, use the [w-Function](https://docs.devexpress.com/Dashboard/401421/common-features/advanced-analytics/aggregations/w-function-aggregation-intermediate-level).
 
-This example illustrates how to emulate the standard [Percent of Total](https://docs.devexpress.com/Dashboard/115920/common-features/advanced-analytics/window-calculations/creating-window-calculations#percent-of-total) calculation behavior. For this the *calculated field* with the following expression is defined:
+This example contains the calculated field with the following expression:
 
 `ToDouble(Sum([Sales])) / w(Total(Sum([Sales])), partitionBy(), orderBy())`
 
@@ -18,7 +18,7 @@ The second part of this expression uses the *w-Function* with the embedded *wind
 ![](images/screenshot.png)
 
 <!-- default file list -->
-*Files to look at*:
+## Files to Look At
 
 * [DesignerForm1.cs](./CS/DesignerForm1.cs)
 * [dashboard1.xml](./CS/dashboard1.xml)
@@ -26,8 +26,9 @@ The second part of this expression uses the *w-Function* with the embedded *wind
 
 ## Documentation
 
-- [Data Analysis](https://docs.devexpress.com/Dashboard/115868/winforms-dashboard/winforms-designer/create-dashboards-in-the-winforms-designer/data-analysis)
+- [Window Calculations](https://docs.devexpress.com/Dashboard/115869/winforms-dashboard/winforms-designer/create-dashboards-in-the-winforms-designer/data-analysis/window-calculations)
 - [w Function - Window Calculations at the Intermediate Aggregation Level](https://docs.devexpress.com/Dashboard/401421/common-features/advanced-analytics/aggregations/w-function-aggregation-intermediate-level)
+- [Calculated Field](https://docs.devexpress.com/Dashboard/116934/common-features/advanced-analytics/calculated-fields)
 
 
 ## More Examples
