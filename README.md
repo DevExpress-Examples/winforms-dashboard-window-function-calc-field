@@ -20,7 +20,7 @@ The second part of this expression uses the *w-Function* with the embedded *wind
 <!-- default file list -->
 ## Files to Look At
 
-* [DesignerForm1.cs](./CS/DesignerForm1.cs)
+* [DesignerForm1.cs](./CS/DesignerForm1.cs) ([DesignerForm1.vb](./VB/DesignerForm1.vb))
 * [dashboard1.xml](./CS/dashboard1.xml)
 <!-- default file list end -->
 
