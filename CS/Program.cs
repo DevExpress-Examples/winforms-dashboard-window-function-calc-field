@@ -12,6 +12,7 @@ namespace WinFormsDashboard {
         /// </summary>
         [STAThread]
         static void Main() {
+            DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(ProductSales));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DesignerForm1());
